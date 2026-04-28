@@ -3,6 +3,11 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="SAGE.vcxproj" />
-  <Project Path="SDL3-3.4.4/VisualC/SDL/SDL.vcxproj" />
+  <Folder Name="/simdJSON/">
+    <File Path="disclosure.txt" />
+    <File Path="simdjson.cpp" />
+    <File Path="simdjson.h" />
+  </Folder>
+  <Project Path="SAGE.vcxproj" Id="b22467c2-72ac-4ad1-b8c6-88d7e4aa6725" />
+  <Project Path="SDL3-3.4.4/VisualC/SDL/SDL.vcxproj" Id="81ce8daf-ebb2-4761-8e45-b71abcca8c68" />
 </Solution>

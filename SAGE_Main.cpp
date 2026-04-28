@@ -13,12 +13,31 @@
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
 
+#include "simdjson/simdjson.h"
+
+using namespace simdjson;
+
 static SDL_Window *window = NULL;
 static SDL_Renderer *renderer = NULL;
 
 /* This function runs once at startup. */
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[])
 {
+    ondemand::parser parser;
+    padded_string json;
+    padded_string::load("Configurations/main_config.json").get(json);
+    ondemand::document doc = parser.iterate(json);
+
+    int window_height = 1080;
+    if (doc["window_height"].is_integer())
+    {
+        window_height = doc["window_height"].get_int32();
+    }
+    else
+    {
+        std::cout << "Using default value for window_height";
+    }
+
     /* Create the window */
     if (!SDL_CreateWindowAndRenderer("Hello World", 800, 600, SDL_WINDOW_FULLSCREEN, &window, &renderer)) {
         SDL_Log("Couldn't create window and renderer: %s", SDL_GetError());
