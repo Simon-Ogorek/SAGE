@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SAGE.cpp">
+    <ClCompile Include="SAGE_Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

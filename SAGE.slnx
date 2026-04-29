@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="SAGE.vcxproj" />
+  <Project Path="SDL3-3.4.4/VisualC/SDL/SDL.vcxproj" />
 </Solution>
