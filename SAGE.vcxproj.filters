@@ -13,10 +13,35 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\simdJSON">
+      <UniqueIdentifier>{abd28f8c-7c55-4492-83b1-a7f84944f5a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Configuration Files">
+      <UniqueIdentifier>{c3037ab9-6c90-473f-a7fc-cdb42aa532f6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SAGE_Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="include\simdjson\simdjson.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="simdjson.h">
+      <Filter>Source Files\simdJSON</Filter>
+    </ClInclude>
+    <ClInclude Include="include\simdjson\simdjson.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="disclosure.txt">
+      <Filter>Source Files\simdJSON</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="Configurations\main_config.json" />
   </ItemGroup>
 </Project>
